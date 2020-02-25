@@ -126,5 +126,16 @@ jQuery(document).ready(function ($) {
   });
 
   // custom code
+  $(document).on('click', '.photo', (event) =>{
 
+    let selection = $(event.currentTarget);
+    let alt = selection.attr('alt');
+
+    let imageSrc = `./photos/${alt}.jpg`;
+
+    console.log(alt);
+
+    $('#popup').show();
+    $('#large').attr('src', imageSrc);
+  });
 });
