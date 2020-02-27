@@ -126,16 +126,40 @@ jQuery(document).ready(function ($) {
   });
 
   // custom code
-  $(document).on('click', '.photo', (event) =>{
+  // const photos = [
+  //   'exterior1',
+  //   'interior1',
+  //   'floorplan1',
+  //   'rendering1',
+  //   'exterior2',
+  //   'interior2',
+  //   'floorplan2',
+  //   'rendering2'
+  // ];
 
-    let selection = $(event.currentTarget);
-    let alt = selection.attr('alt');
+  // photos.forEach((photo) => {
 
-    let imageSrc = `./photos/${alt}.jpg`;
+    // console.log(photo);
 
-    console.log(alt);
+    // const src = `img/screenshots/${photo}-thumbnail.png`;
+    // const image = `<img class="thumbnail" src="${src}" alt="${photo}">`;
+    // $('#portfolio').append(image);
+  // });
 
-    $('#popup').show();
-    $('#large').attr('src', imageSrc);
+
+  $(document).on('click', '.thumbnail1', (event) =>{
+    $('.popup').show('.large-image1');
+    // let selection = $(event.currentTarget);
+    // // let alt = selection.attr(photo);
+    // let imageSrc = `<img/screenshots/exterior1.png>`;
+
+    // console.log(alt);
+
+
+    // $('.large').attr(imageSrc);
+  });
+
+  $(document).on('click', '.popup', (event) => {
+    $('.popup').hide();
   });
 });
